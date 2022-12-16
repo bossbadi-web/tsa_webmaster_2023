@@ -2,10 +2,10 @@
 <html>
   <head>
     {% block head %}
-    <title>{{ request.path[1:].replace('-', ' ') + ' | ' * (request.path != '/') }} bossbadi api</title>
+    <title>{{ request.path[1:].replace('-', ' ') + ' | ' * (request.path != '/') }} interstellr</title>
     <meta
       name="description"
-      content="bossbadi api features fun and random endpoints, making it easy for developers to integrate more features into their own applications."
+      content="interstellr"
     />
     <meta name="author" content="bossbadi" />
     <meta property="og:image" content="{{ url_for('static', filename='img/avatar.png') }}" />
@@ -26,7 +26,7 @@
         <a class="navbar-brand" href="/">
           <img src="{{ url_for('static', filename='img/avatar.png') }}" alt="avatar" height="36" width="36" />
         </a>
-        <a class="navbar-brand" href="/">bossbadi api</a>
+        <a class="navbar-brand" href="/">interstellr</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -50,47 +50,6 @@
               <a class="nav-link" href="/contact">contact</a>
             </li>
           </ul>
-
-          <ul class="navbar-nav ms-auto">
-            {% if current_user %}
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                {{ current_user.username }}#{{ current_user.discriminator }}
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="/account">my account</a></li>
-                <li><a class="dropdown-item" href="/files">my uploads</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="/upload">new upload</a></li>
-                <li><a class="dropdown-item" href="/editor">new editor</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                {% if utils.is_admin(current_user.id) %}
-                <li><a class="dropdown-item" href="/all-files">all uploads</a></li>
-                <li><a class="dropdown-item" href="/all-users">all users</a></li>
-                <li><a class="dropdown-item" href="/shell">shell</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                {% endif %}
-                <li><a class="dropdown-item" href="/logout?redirect={{ request.path }}">logout</a></li>
-              </ul>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="discord-btn nav-link btn" href="/login?redirect={{ request.path }}">
-                login with
-                <img
-                  src="{{ url_for('static', filename='img/discord.svg') }}"
-                  style="height: 20px; width: 20px; margin-bottom: 3px; margin-left: 5px"
-                />
-              </a>
-            </li>
-            {% endif %}
-          </ul>
         </div>
       </div>
     </nav>
@@ -101,9 +60,10 @@
       {{ message }}
     </div>
     {% endfor %} {% endwith %} {% block content %}{% endblock %} {% block footer %}
+
     <section class="footer">
       <p class="container" style="text-align: center; color: var(--cool-gray)">
-        Copyright © 2022 by Andy Tang. All rights reserved.
+        Copyright © 2023 by Team 2009-901. All rights reserved.
       </p>
     </section>
     {% endblock %}

@@ -16,6 +16,13 @@ nav {
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 0;
+}
+
 .discord-btn {
   background-color: var(--blurple);
   color: white;
@@ -44,7 +51,7 @@ h4 {
 
 a {
   color: var(--hot-orange);
-  text-decoration: none
+  text-decoration: none;
 }
 a:hover {
   color: var(--hot-orange);
