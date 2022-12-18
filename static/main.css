@@ -11,11 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-nav {
-  background-color: var(--cool-blue);
-  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-}
-
 .footer {
   position: absolute;
   bottom: 0;
