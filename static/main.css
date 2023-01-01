@@ -12,13 +12,13 @@ html {
 }
 
 html:not([data-scroll="0"]) .navbar {
-  transition: 1s;
+  transition: 0.5s;
   background-color: var(--cool-blue);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 html[data-scroll="0"] .navbar {
-  transition: 0.5s;
+  transition: 1s;
   background-color: transparent;
   box-shadow: none;
 }
