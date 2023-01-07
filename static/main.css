@@ -72,10 +72,30 @@ h2 {
   margin-top: -2em;
 }
 
+/* make quote container look good */
+.blockquote {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 3em;
+  margin: 2em 0;
+}
+
+.blockquote p {
+  font-style: italic;
+}
+
+.blockquote-footer {
+  color: var(--cool-gray);
+  font-size: 0.8em;
+  padding-top: 0.5em;
+}
+
+/* change color of superscripts */
 sup {
   color: var(--cool-gray);
 }
 
+/* remove bullet points on lists */
 .no-bullets {
   list-style: none;
   padding-left: 1em;
