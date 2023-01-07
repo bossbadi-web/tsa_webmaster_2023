@@ -27,23 +27,41 @@
   .parallelogram {
     backdrop-filter: brightness(var(--parallelogram-brightness));
     padding: 1em 2em;
+
+    -webkit-clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
   }
 
-  .parallelogram-top {
-    width: 0;
-    height: 0;
-    border-bottom: 100px solid transparent;
-    border-left: 100vw solid var(--parallelogram-color);
-    backdrop-filter: brightness(var(--parallelogram-brightness));
+  .quote-container {
+    padding: 4em 2em;
   }
 
-  .parallelogram-bottom {
-    width: 0;
-    height: 0;
-    margin-top: -1px;
-    border-top: 100px solid transparent;
-    border-right: 100vw solid var(--parallelogram-color);
-    backdrop-filter: brightness(var(--parallelogram-brightness));
+  /* make quote container look good */
+  .blockquote {
+    border-radius: 10px;
+    padding: 3em;
+    margin: 1em 0;
+  }
+
+  .blockquote p {
+    font-style: italic;
+  }
+
+  .blockquote-footer {
+    color: var(--cool-gray);
+    font-size: 0.8em;
+    padding-top: 0.5em;
+  }
+
+  @media only screen and (max-width: 574px) {
+    .blockquote {
+      padding: 0em;
+    }
+
+    .parallelogram {
+      -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+      clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    }
   }
 </style>
 
@@ -57,9 +75,8 @@
 </section>
 
 <section>
-  <div class="parallelogram-top"></div>
   <div class="parallelogram">
-    <div class="container">
+    <div class="container quote-container">
       <blockquote class="blockquote">
         <p>
           “We always imagined offering the opportunity to view the most incredible natural phenomena from space,
@@ -70,7 +87,6 @@
       </blockquote>
     </div>
   </div>
-  <div class="parallelogram-bottom"></div>
 </section>
 
 <section>
