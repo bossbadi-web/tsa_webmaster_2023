@@ -7,12 +7,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("{{ url_for('static', filename='img/northern-lights.jpg') }}") no-repeat center center;
+    background: url("{{ url_for('static', filename='img/capsule-earth-bg.jpg') }}") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     display: flex;
-    filter: brightness(0.4);
+    filter: brightness(0.3);
     transform: scaleX(-1);
     z-index: -1;
   }
@@ -20,41 +20,22 @@
 
 <section>
   <div id="background"></div>
-  <div class="container">
+  <div class="container mobile-center">
     <h1 class="display-1">interstellr</h1>
-    <p class="lead">a space tourism website</p>
-    <a href="/register" class="btn btn-primary btn-lg">register</a>
-    <a href="/login" class="btn btn-secondary btn-lg">login</a>
+    <p class="lead subheader"><i>exploring the vastness of space, one mission at a time</i></p>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <h1 class="display-1">testing</h1>
-    <p class="lead">this is a test</p>
+    <ul>
+      <li>use biofuel to reduce its carbon footprint<sup>1</sup></li>
+      <li>“We always imagined offering the opportunity to view the most incredible natural phenomena from space, including the Northern Lights, the boot of Italy, the sheer scale of the Nile Delta, and the deep blue seas around the Bahamas” - Founder and co-CEO of Space Perspective<sup>3</sup></li>
+      <li>see the world anew through its vast windows, 450 miles in any direction. The ultra-comfortable, accessible, and gentle six-hour journey redefines space travel<sup>3</sup></li>
+      <li>commercial flights as soon as late 2024<sup>4</sup></li>
+      <li>has now sold more than 1,000 [sales]<sup>4</sup></li>
+    </ul>
   </div>
 </section>
-
-<section>
-  <div class="container">
-    <h1 class="display-1">testing</h1>
-    <p class="lead">this is a test</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h1 class="display-1">testing</h1>
-    <p class="lead">this is a test</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h1 class="display-1">testing</h1>
-    <p class="lead">this is a test</p>
-  </div>
-</section>
-
 
 {% endblock %}

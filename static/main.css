@@ -52,19 +52,74 @@ body {
   color: white;
 }
 
-h2 {
-  color: yellow;
-  font-weight: bold;
-}
-
 section {
   margin-top: 1em;
   padding: 20px 0;
 }
 
+h2 {
+  color: yellow;
+  font-weight: bold;
+
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.subheader {
+  color: var(--cool-gray);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: -2em;
+}
+
+sup {
+  color: var(--cool-gray);
+}
+
+.no-bullets {
+  list-style: none;
+  padding-left: 1em;
+}
+
+/* ol with numbers in superscript */
+ol.super {
+  counter-reset: item;
+  padding: 0;
+  list-style: none;
+}
+
+.super li:before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  vertical-align: super;
+  font-size: x-small;
+  left: 1em;
+  color: var(--cool-gray);
+}
+
+.super li {
+  position: relative;
+  display: block;
+  padding: 0em 0em 0em 1em;
+}
+
 /* center text on mobile */
 @media only screen and (max-width: 574px) {
-  section {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     text-align: center;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 1em;
   }
 }
