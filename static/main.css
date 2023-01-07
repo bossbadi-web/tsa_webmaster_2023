@@ -142,4 +142,8 @@ ol.super {
   .container {
     padding: 0 1em;
   }
+
+  .blockquote {
+    padding: 1em;
+  }
 }
