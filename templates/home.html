@@ -1,6 +1,12 @@
 {% extends "layouts/main.html" %} {% block content %}
 
 <style>
+  :root {
+    --brightness: 0.3;
+    --parallelogram-brightness: calc(2 - var(--brightness));
+    --parallelogram-color: rgba(0, 0, 0, 0.4);
+  }
+
   #background {
     position: fixed;
     top: 0;
@@ -12,18 +18,59 @@
     background-attachment: fixed;
     height: 100vh;
     display: flex;
-    filter: brightness(0.3);
+    filter: brightness(var(--brightness));
     transform: scaleX(-1);
     z-index: -1;
   }
+
+  /* parallelogram div on landing page */
+  .parallelogram {
+    backdrop-filter: brightness(var(--parallelogram-brightness));
+    padding: 1em 2em;
+  }
+
+  .parallelogram-top {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid transparent;
+    border-left: 100vw solid var(--parallelogram-color);
+    backdrop-filter: brightness(var(--parallelogram-brightness));
+  }
+
+  .parallelogram-bottom {
+    width: 0;
+    height: 0;
+    margin-top: -1px;
+    border-top: 100px solid transparent;
+    border-right: 100vw solid var(--parallelogram-color);
+    backdrop-filter: brightness(var(--parallelogram-brightness));
+  }
 </style>
 
+<div id="background"></div>
+
 <section>
-  <div id="background"></div>
   <div class="container mobile-center">
     <h1 class="display-1">interstellr</h1>
     <p class="lead subheader"><i>exploring the vastness of space, one mission at a time</i></p>
   </div>
+</section>
+
+<section>
+  <div class="parallelogram-top"></div>
+  <div class="parallelogram">
+    <div class="container">
+      <blockquote class="blockquote">
+        <p>
+          “We always imagined offering the opportunity to view the most incredible natural phenomena from space,
+          including the Northern Lights, the boot of Italy, the sheer scale of the Nile Delta, and the deep blue seas
+          around the Bahamas”
+        </p>
+        <footer class="blockquote-footer">Founder and co-CEO of Space Perspective</footer>
+      </blockquote>
+    </div>
+  </div>
+  <div class="parallelogram-bottom"></div>
 </section>
 
 <section>
@@ -37,17 +84,6 @@
       <li>commercial flights as soon as late 2024<sup>4</sup></li>
       <li>has now sold more than 1,000 [sales]<sup>4</sup></li>
     </ul>
-
-    <div class="container">
-      <blockquote class="blockquote">
-        <p>
-          “We always imagined offering the opportunity to view the most incredible natural phenomena from space,
-          including the Northern Lights, the boot of Italy, the sheer scale of the Nile Delta, and the deep blue seas
-          around the Bahamas”
-        </p>
-        <footer class="blockquote-footer">Founder and co-CEO of Space Perspective</footer>
-      </blockquote>
-    </div>
   </div>
 </section>
 
