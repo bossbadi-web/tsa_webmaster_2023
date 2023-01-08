@@ -18,9 +18,9 @@ def experience():
     return render_template('experience.html')
 
 
-@home.route('/pricing', methods=['GET'])
-def pricing():
-    return render_template('pricing.html')
+@home.route('/register', methods=['GET'])
+def register():
+    return render_template('register.html')
 
 
 @home.route('/spaceship', methods=['GET'])
