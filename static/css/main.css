@@ -61,6 +61,8 @@ section {
 h1 {
   color: yellow;
   letter-spacing: 0.05em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h2 {
