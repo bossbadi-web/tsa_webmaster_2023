@@ -63,7 +63,7 @@
 /* Six columns side by side */
 .slide-column {
   float: left;
-  width: calc(100% / 7);
+  width: calc(100% / 8);
 }
 
 /* Add a transparency effect for thumnbail images */
