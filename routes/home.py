@@ -33,5 +33,10 @@ def training():
     return render_template('training.html')
 
 
+@home.route('/sources', methods=['GET'])
+def sources():
+    return render_template('sources.html')
+
+
 def setup(app):
     app.register_blueprint(home)

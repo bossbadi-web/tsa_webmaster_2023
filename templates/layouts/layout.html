@@ -13,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="{{ url_for('static', filename='img/avatar.ico') }}" />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
-    <script src="{{ url_for('static', filename='navScroll.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <script src="{{ url_for('static', filename='js/navScroll.js') }}"></script>
     {% endblock %}
   </head>
 
@@ -54,6 +54,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/about">about</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sources">sources</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -73,6 +76,6 @@
     </section>
     {% endblock %}
 
-    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
   </body>
 </html>
