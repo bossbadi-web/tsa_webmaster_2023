@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/parallelogram.css') }}" />
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/cvhs.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    z-index: -1;
+  }
+
+  .blockquote p {
+    text-align: center;
+  }
+</style>
+
+<div id="background"></div>
+
+<section>
+  <div class="container">
+    <h1 class="display-1">career & technical education</h1>
+    <p>
+      Cumberland Valley high school has a large variety of career pathways available for students to choose or students
+      can create their own pathway following a set of guidelines. There are pathways available in agriculture, art,
+      business, Family and Consumer Sciences, Music, STEM, and more. Technical education in Cumberland Valley is also
+      offered at a vocational tech school where computer programming, construction, technology and logistics, machine
+      technology and computer networking are taught. At Cumberland Valley high school, classes also include hands-on
+      approach to learning and offer a wide variety from traditional classes to independent studies.
+    </p>
+
+    <h2>quick links</h2>
+    <a class="btn btn-secondary" target="_blank" href="https://www.cvschools.org">district website</a>
+    <a class="btn btn-secondary" target="_blank" href="https://mobile.twitter.com/FlyCVEagles">twitter</a>
+    <a class="btn btn-secondary" target="_blank" href="https://www.youtube.com/c/cumberlandvalleytv">youtube</a>
+  </div>
+</section>
+
+<section>
+  <div class="parallelogram">
+    <div class="container quote-container">
+      <blockquote class="blockquote">
+        <p class="display-6">Soaring to Greatness, Committed to Excellence</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>our stellar teachers</h2>
+  </div>
+</section>
+
+{% endblock %}

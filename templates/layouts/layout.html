@@ -3,10 +3,7 @@
   <head>
     {% block head %}
     <title>{{ request.path[1:].replace('-', ' ') + ' | ' * (request.path != '/') }} interstellr</title>
-    <meta
-      name="description"
-      content="exploring the vastness of space, one mission at a time"
-    />
+    <meta name="description" content="exploring the vastness of space, one mission at a time" />
     <meta name="author" content="Team 2009-901" />
     <meta property="og:image" content="{{ url_for('static', filename='img/avatar.png') }}" />
     <meta content="#151f38" data-react-helmet="true" name="theme-color" />
@@ -52,10 +49,30 @@
               <a class="nav-link" href="/register">register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">about</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/sources">sources</a>
+              <!-- subnav collapse -->
+              <div class="dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  about
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="/our-chapter">our chapter</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/cte">cte</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/legal">legal</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
