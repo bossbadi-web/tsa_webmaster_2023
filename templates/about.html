@@ -3,34 +3,29 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/slideshow.css') }}" />
 
 <style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/regionals2022.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+
   .img-wrapper {
     width: 100%;
   }
 
   .img-object {
     float: right;
-  }
-
-  .slideshow-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2em;
-    border-radius: 10px;
-  }
-
-  .slideshow-img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-    border-radius: 10px;
-  }
-
-  .thumb-img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
+    min-width: 100px !important;
   }
 
   @media only screen and (max-width: 991px) {
@@ -39,6 +34,8 @@
     }
   }
 </style>
+
+<div id="background"></div>
 
 <section>
   <div class="container">
@@ -52,11 +49,8 @@
       <li>Shunyu Tang - 2009-031</li>
     </ul>
 
-    <a class="btn btn-secondary" href="/plan-of-work-log">plan of work log</a>
-    <a class="btn btn-secondary" href="/copyright-checklist">copyright checklist</a>
-
     <h2>what is tsa?</h2>
-    <div class="d-flex flex-slide-column flex-lg-row">
+    <div class="d-flex flex-row">
       <div class="p-2 text-wrapper">
         <p>
           TSA is a national, non-profit organization of high school and middle school student members who are engaged in
@@ -66,7 +60,7 @@
       </div>
 
       <div class="p-2 img-wrapper">
-        <img class="img-fluid img-object" src="{{ url_for('static', filename='img/tsa.png') }}" />
+        <img class="img-fluid img-object" src="{{ url_for('static', filename='img/tsa-logo.png') }}" />
       </div>
     </div>
 
