@@ -31,18 +31,21 @@ body {
   margin: 0;
   position: relative;
 }
-
 body::after {
   content: "";
   display: block;
   height: 3em;
 }
-
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding-bottom: 0;
+}
+.footer .container {
+  color: var(--cool-gray);
+  text-align: center;
+  padding: 1em 1em;
 }
 
 body {

@@ -130,10 +130,8 @@
         <label for="inputZip" class="form-label">zip</label>
         <input type="text" class="form-control" required />
       </div>
-    </form>
 
     <h2>billing information</h2>
-    <form class="row g-3 m-2">
       <div class="dropdown-divider"></div>
       <div class="col-md-6">
         <label for="billName" class="form-label">name of cardholder</label>
@@ -249,16 +247,10 @@
       </div>
 
       <div class="col-12">
-        <button class="btn btn-primary btn-lg" onclick="submitOrder()">submit order</button>
+        <button class="btn btn-primary btn-lg">submit order</button>
       </div>
     </form>
   </div>
 </section>
-
-<script>
-  function submitOrder() {
-    alert("Your order has been submitted! Please check your email for confirmation.");
-  }
-</script>
 
 {% endblock %}
