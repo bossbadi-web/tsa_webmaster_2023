@@ -1,6 +1,7 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/earth.css') }}" />
 <link rel="stylesheet" href="{{ url_for('static', filename='css/parallelogram.css') }}" />
 
 <style>
@@ -29,8 +30,15 @@
 
 <section>
   <div class="container mobile-center">
-    <h1 class="display-1">interstellr</h1>
-    <p class="subheader"><i>exploring the vastness of space, one mission at a time</i></p>
+    <div class="d-flex flex-lg-row flex-column">
+      <div class="flex-grow-1 p-4">
+        <h1 class="display-1">interstellr</h1>
+        <p class="subheader"><i>exploring the vastness of space, one mission at a time</i></p>
+      </div>
+      <div class="p-4">
+        <div class="earth"></div>
+      </div>
+    </div>
   </div>
 </section>
 
