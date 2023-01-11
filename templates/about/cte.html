@@ -41,6 +41,14 @@
     width: 100%;
     text-align: left !important;
   }
+
+  .social-btn {
+    margin-bottom: 0.3em;
+  }
+
+  .btn img {
+    height: 2em;
+  }
 </style>
 
 <div id="background"></div>
@@ -58,9 +66,18 @@
     </p>
 
     <h2>quick links</h2>
-    <a class="btn btn-success" target="_blank" href="https://www.cvschools.org">district website</a>
-    <a class="btn btn-primary" target="_blank" href="https://mobile.twitter.com/FlyCVEagles">twitter</a>
-    <a class="btn btn-danger" target="_blank" href="https://www.youtube.com/c/cumberlandvalleytv">youtube</a>
+    <a class="btn btn-secondary social-btn" target="_blank" href="https://www.cvschools.org">
+      <img src="{{ url_for('static', filename='img/social/school.svg') }}" />
+      <span>district website</span>
+    </a>
+    <a class="btn btn-secondary social-btn" target="_blank" href="https://mobile.twitter.com/FlyCVEagles">
+      <img src="{{ url_for('static', filename='img/social/twitter.svg') }}" class="img-fluid" />
+      <span>twitter</span>
+    </a>
+    <a class="btn btn-secondary social-btn" target="_blank" href="https://www.youtube.com/c/cumberlandvalleytv">
+      <img src="{{ url_for('static', filename='img/social/youtube.svg') }}" class="img-fluid" />
+      <span>youtube</span>
+    </a>
   </div>
 </section>
 
