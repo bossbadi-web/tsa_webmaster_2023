@@ -4,8 +4,8 @@ home = Blueprint('home', __name__)
 
 
 @home.route('/', methods=['GET'])
-def home_():
-    return render_template('home.html')
+def landing():
+    return render_template('landing.html')
 
 
 @home.route('/about', methods=['GET'])

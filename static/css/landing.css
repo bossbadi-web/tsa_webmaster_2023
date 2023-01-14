@@ -4,6 +4,7 @@
   width: 50%;
 }
 .text-wrapper p {
+  padding: 1em;
   text-align: left;
 }
 
@@ -65,5 +66,9 @@ select {
   .contact-section .container {
     padding-top: 3em;
     padding-bottom: 9em;
+  }
+
+  .text-wrapper p {
+    padding: 0;
   }
 }
