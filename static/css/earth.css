@@ -22,3 +22,9 @@
 .earth:hover {
   --t: 1s;
 }
+
+@media only screen and (max-width: 574px) {
+  .earth {
+    --d: 250px;
+  }
+}
