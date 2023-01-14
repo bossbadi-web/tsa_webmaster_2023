@@ -81,11 +81,6 @@ h2 {
   margin-top: -2em;
 }
 
-/* change color of superscripts */
-sup {
-  color: var(--cool-gray);
-}
-
 /* remove bullet points on lists */
 .no-bullets {
   list-style: none;
