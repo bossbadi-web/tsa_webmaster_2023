@@ -9,6 +9,10 @@
   font-weight: 600;
 }
 
+b {
+  color: yellow;
+}
+
 .img-wrapper {
   margin: auto;
   width: 50%;
